@@ -213,8 +213,8 @@ public class IniFile {
                         contexts.add("");
                         configurations.put("", props);
                     }
-                    String[] couple = line.split("=");
-                    props.put(couple[0], couple[1]);
+                    String[] couple = line.split("=", 2);
+                    props.put(couple[0].trim(), couple[1].trim());
                 }
             }
         }
